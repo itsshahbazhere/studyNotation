@@ -23,7 +23,13 @@ const App = () => {
               </div>
             }
           />
-          <Route path="/login" element={<Login setLoggedIn={setLoggedIn} />} />
+          <Route
+            path="/login"
+            element=<div>
+              <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+              <Login setLoggedIn={setLoggedIn} />
+            </div>
+          />
           <Route
             path="/signup"
             element={
